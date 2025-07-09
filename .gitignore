@@ -1,0 +1,10 @@
+﻿.idea
+HybridCLRData
+Library
+Logs
+obj
+Temp
+UserSettings
+Assets/HybridCLRGenerate
+*.csproj
+*.sln

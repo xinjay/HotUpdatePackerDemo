@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e152f2cf489974ab3a9cb887afaab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commitPrefix: XXX
+  versionControl: 0
+  HotUpdateSettingsFile: Assets/HotUpdateSettings.bytes
+  AOTDllBackupDir: GameToolsFolder/AOTBackup
+  AOTMetaDllDir: Assets\StreamingAssets/AOTMeta
+  HotUpdateDllDir: Assets\StreamingAssets\HotUpdate
+  HotUpdateItems:
+  - assemblyName: GameLogic
+    compileDir: Assets/Sample/Scripts/HotUpdate/GameLogic
+    defines: GAME_LOGIC
+    depend_ass: 
+    depend_dll: 
+  - assemblyName: GameLogic2
+    compileDir: Assets/Sample/Scripts/HotUpdate/GameLogic2
+    defines: GAME_LOGIC2
+    depend_ass: GameLogic
+    depend_dll: 
+  - assemblyName: Reflector
+    compileDir: Assets/HotUpdatePacker/Reflector
+    defines: REFLECTOR
+    depend_ass: GameLogic|GameLogic2
+    depend_dll: 
