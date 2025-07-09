@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commitPrefix: XXX
   versionControl: 0
-  HotUpdateSettingsFile: Assets/HotUpdateSettings.bytes
-  AOTDllBackupDir: GameToolsFolder/AOTBackup
-  AOTMetaDllDir: Assets\StreamingAssets/AOTMeta
-  HotUpdateDllDir: Assets\StreamingAssets\HotUpdate
+  HotUpdateSettingsFile: Assets/Sample/Res/Assembly/HotUpdateSettings.bytes
+  AOTDllBackupDir: HotUpdatePacker/AOTBackup
+  AOTMetaDllDir: Assets/Sample/Res/Assembly/AOTMeta
+  HotUpdateDllDir: Assets/Sample/Res/Assembly/AOTMeta
   HotUpdateItems:
   - assemblyName: GameLogic
     compileDir: Assets/Sample/Scripts/HotUpdate/GameLogic

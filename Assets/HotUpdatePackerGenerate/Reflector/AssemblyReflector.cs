@@ -1,7 +1,6 @@
 #if REFLECTOR || UNITY_EDITOR
 using System;
 using HotUpdatePacker.Runtime;
-using UnityEngine;
 
 namespace Reflector
 {
@@ -12,6 +11,7 @@ namespace Reflector
             InitHotUpdateAssemblies();
             RegistCustomAssemblyTypes();
         }
+
         /// <summary>
         /// 热更程序集加载后的一些初始化操作
         /// </summary>
@@ -25,7 +25,6 @@ namespace Reflector
         private static void RegistCustomAssemblyTypes()
         {
         }
-
 
         #region Utils
 
