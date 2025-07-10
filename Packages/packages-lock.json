@@ -162,10 +162,11 @@
       "url": "https://packages.unity.com"
     },
     "com.xinjay.hotupdatepacker": {
-      "version": "file:HotUpdatePacker",
+      "version": "https://gitee.com/xinjay/hot-update-packer.git",
       "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "7fa6a451c2cfcd602137c73bd1bf587c00ffba84"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
