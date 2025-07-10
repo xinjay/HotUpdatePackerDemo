@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8383733c32a1542aaf00cb9ffbcb3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useHotupdatDll: 0
 --- !u!114 &330585550
 MonoBehaviour:
   m_ObjectHideFlags: 0

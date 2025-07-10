@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 2358481148
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 26eeb6255af369bdd729ee1b3b4aa84f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 26eeb6255af369bdd729ee1b3b4aa84f
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Sample/Res/Assembly/AOTMeta/GameLogic2.bytes
+- Assets/Sample/Res/Assembly/HotUpdate/GameLogic.bytes
+- Assets/Sample/Res/Assembly/AOTMeta/AssemblyDefineSample.bytes
+- Assets/Sample/Res/Assembly/HotUpdateSettings.bytes
+- Assets/Sample/Res/Assembly/AOTMeta/GameLogic.bytes
+- Assets/Sample/Res/Assembly/AOTMeta/Reflector.bytes
+- Assets/Sample/Res/Assembly/HotUpdate/GameLogic2.bytes
+Dependencies: []

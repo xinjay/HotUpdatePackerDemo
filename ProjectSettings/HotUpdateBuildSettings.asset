@@ -30,7 +30,7 @@ MonoBehaviour:
     depend_ass: GameLogic
     depend_dll: 
   - assemblyName: Reflector
-    compileDir: Assets/HotUpdatePacker/Reflector
+    compileDir: Assets/HotUpdatePackerGenerate/Reflector
     defines: REFLECTOR
     depend_ass: GameLogic|GameLogic2
     depend_dll: 

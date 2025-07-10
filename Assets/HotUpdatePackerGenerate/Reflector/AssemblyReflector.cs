@@ -1,5 +1,7 @@
 #if REFLECTOR || UNITY_EDITOR
 using System;
+using GameLogic;
+using GameLogic2;
 using HotUpdatePacker.Runtime;
 
 namespace Reflector
@@ -24,6 +26,8 @@ namespace Reflector
         /// </summary>
         private static void RegistCustomAssemblyTypes()
         {
+            RegistType(typeof(GameLogicRunner));
+            RegistType(typeof(GameLogic2Runner));
         }
 
         #region Utils

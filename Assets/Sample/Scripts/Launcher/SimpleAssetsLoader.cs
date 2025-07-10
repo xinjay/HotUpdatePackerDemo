@@ -1,5 +1,7 @@
 using System;
 using HotUpdatePacker.Runtime;
+using UnityEngine;
+using System.IO;
 
 namespace HotUpdatePacker
 {
@@ -12,26 +14,39 @@ namespace HotUpdatePacker
             get
             {
                 if (_instance == null)
+                {
                     _instance = new SimpleAssetsLoader();
+                    _instance.LoadAbRes();
+                }
                 return _instance;
             }
         }
 
-        public void LoadAsset<T>(string fileName, Action<T> callback, bool unload) where T : class
+        private AssetBundle bundle;
+
+        public void LoadAbRes()
         {
-            //AssetUtils.SyncLoad_File(fileName, (obj) => { callback.Invoke(obj as T); }, unload);
+#if UNITY_EDITOR
+            var abname = "Assets/StreamingAssets/abres.ab";
+#else
+            var abname = Path.Combine(Application.streamingAssetsPath, "abres.ab");
+#endif
+            AssetBundle.UnloadAllAssetBundles(true);
+            bundle = AssetBundle.LoadFromFile(abname);
         }
 
         public void LoadBytes(string fileName, Action<byte[]> callback)
         {
-            //var bytes = AssetUtils.GetAllBytesByIO(fileName);
-            // callback.Invoke(bytes);
+            var asset = bundle.LoadAsset<TextAsset>(fileName);
+            var bytes = asset.bytes;
+            callback.Invoke(bytes);
         }
 
         public void LoadText(string fileName, Action<string> callback)
         {
-            //var text = AssetUtils.GetAllTextByIO(fileName);
-            //callback.Invoke(text);
+            var asset = bundle.LoadAsset<TextAsset>(fileName);
+            var text = asset.text;
+           callback.Invoke(text);
         }
     }
 }

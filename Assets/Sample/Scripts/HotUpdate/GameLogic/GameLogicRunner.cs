@@ -14,7 +14,7 @@ namespace GameLogic
 
         public static void GameLogicRunnerCall(string msg)
         {
-            Logger.AppendLog($"GameLogicRunnerCall->{msg}");
+            Logger.AppendLog($"GameLogicRunnerCall<-{msg}");
         }
     }
 }

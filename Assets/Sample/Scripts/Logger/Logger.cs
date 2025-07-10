@@ -6,7 +6,7 @@ public class Logger : MonoBehaviour
 
     public static void AppendLog(string message)
     {
-        Logger.message += $"\nLogger->{message}";
+        Logger.message += $"\nLogger<-{message}";
     }
 
     void OnGUI()
