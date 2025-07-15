@@ -2,6 +2,7 @@ using System;
 using HotUpdatePacker.Runtime;
 using UnityEngine;
 using System.IO;
+using Object = UnityEngine.Object;
 
 namespace HotUpdatePacker
 {
@@ -18,6 +19,7 @@ namespace HotUpdatePacker
                     _instance = new SimpleAssetsLoader();
                     _instance.LoadAbRes();
                 }
+
                 return _instance;
             }
         }
@@ -35,6 +37,13 @@ namespace HotUpdatePacker
             bundle = AssetBundle.LoadFromFile(abname);
         }
 
+
+        public void LoadAsset<T>(string fileName, Action<T> callback, bool unload) where T : Object
+        {
+            var asset = bundle.LoadAsset<T>(fileName);
+            callback.Invoke(asset);
+        }
+
         public void LoadBytes(string fileName, Action<byte[]> callback)
         {
             var asset = bundle.LoadAsset<TextAsset>(fileName);
@@ -46,7 +55,7 @@ namespace HotUpdatePacker
         {
             var asset = bundle.LoadAsset<TextAsset>(fileName);
             var text = asset.text;
-           callback.Invoke(text);
+            callback.Invoke(text);
         }
     }
 }
